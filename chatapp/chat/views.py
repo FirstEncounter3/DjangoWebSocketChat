@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 from .forms import SignUpForm, UserUpdateForm, AccountUpdateForm
 
@@ -11,12 +12,22 @@ from . import models
 
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    users = User.objects.all()
+    return render(request, 'index.html', {"users": users})
 
 
 @login_required
 def room(request, room_name):
-    return render(request, "room.html", {"room_name": room_name})
+    room_object = models.Room.objects.filter(room_name=room_name).first()
+    chats = []
+
+    if room_object:
+        chats = models.Message.objects.filter(room=room_object)
+    else:
+        room_object = models.Room(room_name=room_name)
+        room_object.save()
+
+    return render(request, "room.html", {"room_name": room_name, 'chats': chats})
 
 
 def register(request):
@@ -43,7 +54,7 @@ def profile(request):
             user_update_form.save()
             account_update_form.save()
             messages.success(request, f'Your account has been updated!')
-            return redirect('index')  # Redirect back to profile page
+            return redirect('account')  # Redirect back to profile page
 
     else:
         user_update_form = UserUpdateForm(instance=request.user)
@@ -55,10 +66,3 @@ def profile(request):
     }
 
     return render(request, 'account.html', context)
-    # return render(request, 'users/profile.html', context)
-
-# class SignUp(CreateView):
-#     model = models.Account
-#     form_class = SignUpForm
-#     success_url = '/accounts/login'
-#     template_name = 'registration/signup.html'

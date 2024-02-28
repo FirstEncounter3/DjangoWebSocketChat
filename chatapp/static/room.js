@@ -1,8 +1,9 @@
 const chatLog = document.querySelector('#chat-log');
 const roomName = JSON.parse(document.getElementById('room_name').textContent);
 
-if (!chatLog.hasChildNodes()) {
+if (chatLog.childNodes.length <= 1 ) {
     const emptyText = document.createElement('h3')
+
     emptyText.id = 'emptyText'
     emptyText.innerText = 'No Messages'
     emptyText.className = 'emptyText'
@@ -20,8 +21,20 @@ const chatSocket = new WebSocket(
 chatSocket.onmessage = function(e) {
     const data = JSON.parse(e.data)
     const messageElement = document.createElement('div')
-    messageElement.innerHTML = data.message
-    messageElement.className = 'message'
+
+    const userId = data['user_id']
+    const userName = data['user_name']
+
+    const loggedInUserID = JSON.parse(document.getElementById('user_id').textContent)
+
+    messageElement.innerHTML = `${userName}: ${data.message}`
+
+    if (userId === loggedInUserID) {
+        messageElement.classList.add('message', 'sender')
+    } else {
+        messageElement.classList.add('message', 'receiver')
+    }
+
     chatLog.appendChild(messageElement)
 
     if (document.querySelector('#emptyText')) {
@@ -43,6 +56,7 @@ document.querySelector('#chat-message-input').onkeyup = function(e) {
 document.querySelector('#chat-message-submit').onclick = function(e) {
     const messageInputDom = document.querySelector('#chat-message-input');
     const message = messageInputDom.value;
+
     chatSocket.send(JSON.stringify({
         'message': message
     }));

@@ -15,6 +15,12 @@
         <h2 class="heading">What chat room would you like to enter?</h2>
         <input class="textInput" id="room-name-input" type="text" size="100"><br>
         <input class= "button" id="room-name-submit" type="button" value="Enter">
+        <p>Or choose active users below</p>
+        {% for user in users %}
+            <ul>
+                <li><a href="/chat/{{ user.username }}">{{ user.username }}</a></li>
+            </ul>
+        {% endfor %}
     </div>
 
     <script src="{% static 'index.js' %}"></script>
