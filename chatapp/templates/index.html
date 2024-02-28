@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
 <body>
+    <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">logout</button>
+    </form>
     <div class="container">
         <h2 class="heading">What chat room would you like to enter?</h2>
         <input class="textInput" id="room-name-input" type="text" size="100"><br>
