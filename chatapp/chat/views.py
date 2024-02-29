@@ -3,16 +3,20 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
+from rest_framework import viewsets
+from rest_framework import permissions
+
 from .forms import SignUpForm, UserUpdateForm, AccountUpdateForm
 
 from . import models
+from . import serializers
 
 
 # Create your views here.
 
 @login_required
 def index(request):
-    users = User.objects.all()
+    users = User.objects.all().exclude(pk=request.user.id)
     return render(request, 'index.html', {"users": users})
 
 
@@ -48,8 +52,8 @@ def profile(request):
     if request.method == 'POST':
         user_update_form = UserUpdateForm(request.POST, instance=request.user)
         account_update_form = AccountUpdateForm(request.POST,
-                                   request.FILES,
-                                   instance=request.user.account)
+                                                request.FILES,
+                                                instance=request.user.account)
         if user_update_form.is_valid() and account_update_form.is_valid():
             user_update_form.save()
             account_update_form.save()
@@ -66,3 +70,9 @@ def profile(request):
     }
 
     return render(request, 'account.html', context)
+
+
+class RoomViewSet(viewsets.ModelViewSet):
+    queryset = models.Room.objects.all()
+    serializer_class = serializers.RoomSerializer
+    permission_classes = [permissions.IsAdminUser]
