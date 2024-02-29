@@ -8,24 +8,24 @@
     <meta name="author" content="" />
     <title>ChatApp</title>
     {% load static %}
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
 </head>
 <body>
     <nav class="nav-menu">
-        <ul>
+        <ul class="nav-ul">
             {% if user.is_authenticated %}
-                <li>
-                    <a class="nav-link" id="username" href="{% url 'profile' %}"> {{ user.username }} </a>
+                <li class="nav-li">
+                    <a class="nav-link" id="username" href="{% url 'profile' %}"> Account {{ user.username }} </a>
                 </li>
                 <li>
                     <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
-                    <button class="nav-link" type="submit">logout</button>
+                    <button class="nav-button" type="submit">logout</button>
                     </form>
                 </li>
                 {% if user.is_superuser %}
-                <li>
-                    <a class="nav-link" href="/api">API</a>
+                <li class="nav-li">
+                    <a class="nav-link" href="/api/">API</a>
                 </li>
                 {% endif %}
             {% endif %}
@@ -34,4 +34,7 @@
     {% block content %}
     {% endblock content %}
 </body>
+    <footer class="footer">
+        <a class="footer-link" href="https://github.com/FirstEncounter3">FirstEncounter3</a>
+    </footer>
 </html>
