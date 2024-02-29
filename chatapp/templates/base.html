@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>ChatApp</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+            {% if user.is_authenticated %}
+                <li>
+                    <a class="nav-link" id="username" href="{% url 'profile' %}"> {{ user.username }} </a>
+                </li>
+                <li>
+                    <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button class="nav-link" type="submit">logout</button>
+                    </form>
+                </li>
+                {% if user.is_superuser %}
+                <li>
+                    <a class="nav-link" href="/api">API</a>
+                </li>
+                {% endif %}
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -19,10 +19,18 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from rest_framework import routers
+from chat import views
+
+router = routers.DefaultRouter()
+router.register(r'rooms', views.RoomViewSet)
+
 urlpatterns = [
     path("", include("chat.urls")),
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
+    path('api/', include('rest_framework.urls', namespace='rest_framework'), name='api'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += router.urls
