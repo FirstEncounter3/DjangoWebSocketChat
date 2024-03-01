@@ -1,6 +1,13 @@
 const chatLog = document.querySelector('#chat-log');
 const roomName = JSON.parse(document.getElementById('room_name').textContent);
 
+function scrollToBottom() {
+    let objDiv = document.getElementById("chat-log");
+    objDiv.scrollTop = objDiv.scrollHeight;
+}
+
+scrollToBottom();
+
 if (chatLog.childNodes.length <= 1 ) {
     const emptyText = document.createElement('h3')
 
@@ -40,6 +47,8 @@ chatSocket.onmessage = function(e) {
     if (document.querySelector('#emptyText')) {
         document.querySelector('#emptyText').remove()
     }
+
+    scrollToBottom();
 };
 
 chatSocket.onclose = function(e) {

@@ -1,6 +1,5 @@
 body {
     background-color: #212121;
-    background-size: cover;
     font-family: monospace;
 }
 
@@ -16,7 +15,7 @@ body {
     height: 30px;
     outline: none;
     background-color: #212121;
-    color: #3f3f3f;
+    color: #FAEEDD;
     transition: .5s linear;
     font-family: monospace;
     letter-spacing: 1px;
@@ -52,7 +51,7 @@ body {
   height: 30px;
   outline: none;
   background-color: #212121;
-  color: #3f3f3f;
+  color: #FAEEDD;
   padding: 5px;
   transition: .5s linear;
   font-family: monospace;
@@ -71,7 +70,7 @@ body {
     border: 2px solid transparent;
     outline: none;
     background-color: #212121;
-    color: #3f3f3f;
+    color: #FAEEDD;
     padding: 5px;
     transition: .5s linear;
     font-family: monospace;
@@ -84,7 +83,7 @@ body {
 
 .container {
   display: block;
-  margin-top: 20%;
+  margin-top: 16%;
   text-align: center;
   position: relative;
   left: 50%;
@@ -179,7 +178,7 @@ body {
   height: 30px;
   outline: none;
   background-color: #212121;
-  color: #3f3f3f;
+  color: #FAEEDD;
   padding: 5px;
   transition: .5s linear;
   font-family: monospace;
@@ -205,7 +204,7 @@ body {
   height: 30px;
   outline: none;
   background-color: #212121;
-  color: #3f3f3f;
+  color: #FAEEDD;
   padding: 5px;
   transition: .5s linear;
   font-family: monospace;
@@ -290,3 +289,88 @@ body {
     padding: 5px;
 }
 
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.user-h2 {
+    color: white;
+    text-align: center;
+}
+
+.form {
+   display: block;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 10px;
+   margin-top: 20%;
+   color: #FAEEDD;
+}
+
+.form-group a {
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  outline: none;
+  background-color: #212121;
+  color: #FAEEDD;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.form-group a:hover {
+   color: #fa4753;
+}
+
+.helptext {
+    color: #fa4753;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: xx-small;
+    padding: 5px;
+}
+
+#id_username {
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f;
+  caret-color: #3f3f3f;
+  background-color: #212121;
+  color: white;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+#id_username:focus {
+  border: 2px solid #fa4753;
+  caret-color: #fa4753;
+  color: #fa4753;
+  box-shadow: 4px 4px 10px #070707;
+}
+
+#id_username:focus::placeholder {
+  color: #fa4753;
+}
+
+#id_avatar::file-selector-button {
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: #212121;
+  color: #fa4753;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+#id_avatar::file-selector-button:hover {
+    color: white;
+}
