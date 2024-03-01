@@ -5,16 +5,17 @@ ChatApp
 {% load static %}
 {% block content %}
     <div class="container">
-        <input class="textInput" id="room-name-input" type="text" placeholder="Type room here"><br>
+        <input class="textInput" id="room-name-input" type="text" placeholder="type room here"
+        pattern="[\/^\/]" title="character / is not allowed">
+        <p class="small-hint">*characters / and \ is not allowed</p>
         <input class="button" id="room-name-submit" type="hidden" value="Enter">
     </div>
-
     <div class="users">
-        <p class="users-p">Or choose active users below</p>
+        <p class="users-p">or choose active users below</p>
         <div class="users-below">
             {% for user in users %}
                 <ul class="users-ul">
-                    <li class="users-li"><a href="/chat/{{ user.username }}" class="users-link">{{ user.username }}</a></li>
+                    <li class="users-li"><a href="/chat/{{ user.account.user_uuid }}" class="users-link">{{ user.username }}</a></li>
                 </ul>
             {% endfor %}
         </div>

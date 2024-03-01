@@ -15,7 +15,10 @@
         <ul class="nav-ul">
             {% if user.is_authenticated %}
                 <li class="nav-li">
-                    <a class="nav-link" id="username" href="{% url 'profile' %}"> Account {{ user.username }} </a>
+                    <a class="nav-link" id="username" href="{% url 'profile' %}"> account {{ user.username }} </a>
+                </li>
+                <li class="nav-li">
+                    <a class="nav-link" href="/chat/{{ user.account.user_uuid }}">my room</a>
                 </li>
                 <li>
                     <form method="post" action="{% url 'logout' %}">
@@ -25,7 +28,7 @@
                 </li>
                 {% if user.is_superuser %}
                 <li class="nav-li">
-                    <a class="nav-link" href="/api/">API</a>
+                    <a class="nav-link" href="{% url 'room-list' %}">api</a>
                 </li>
                 {% endif %}
             {% endif %}

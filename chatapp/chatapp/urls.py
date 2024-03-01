@@ -29,7 +29,7 @@ urlpatterns = [
     path("", include("chat.urls")),
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('rest_framework.urls', namespace='rest_framework'), name='api'),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
