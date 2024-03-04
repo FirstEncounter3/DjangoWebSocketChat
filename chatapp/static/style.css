@@ -15,8 +15,8 @@ body {
     height: 30px;
     outline: none;
     background-color: #212121;
-    color: #FAEEDD;
-    transition: .5s linear;
+    color: #faeedd;
+    transition: 0.5s linear;
     font-family: monospace;
     letter-spacing: 1px;
 }
@@ -32,30 +32,30 @@ body {
 }
 
 .nav-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .nav-li {
-  float: left;
+    float: left;
 }
 
 .nav-link {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  max-width: 190px;
-  height: 30px;
-  outline: none;
-  background-color: #212121;
-  color: #FAEEDD;
-  padding: 5px;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    max-width: 190px;
+    height: 30px;
+    outline: none;
+    background-color: #212121;
+    color: #faeedd;
+    padding: 5px;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 .nav-link:hover {
@@ -70,9 +70,9 @@ body {
     border: 2px solid transparent;
     outline: none;
     background-color: #212121;
-    color: #FAEEDD;
+    color: #faeedd;
     padding: 5px;
-    transition: .5s linear;
+    transition: 0.5s linear;
     font-family: monospace;
     letter-spacing: 1px;
 }
@@ -82,40 +82,40 @@ body {
 }
 
 .container {
-  display: block;
-  margin-top: 16%;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  width: 630px;
+    display: block;
+    margin-top: 16%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 630px;
 }
 
 .textInput {
-  max-width: 190px;
-  height: 30px;
-  border: 2px solid transparent;
-  outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
-  background-color: #212121;
-  color: white;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
-  text-align: center;
+    max-width: 190px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    color: white;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .textInput:focus {
-  border: 2px solid #fa4753;
-  caret-color: #fa4753;
-  color: #fa4753;
-  box-shadow: 4px 4px 10px #070707;
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
 }
 
 .textInput:focus::placeholder {
-  color: #fa4753;
+    color: #fa4753;
 }
 
 .small-hint {
@@ -127,62 +127,62 @@ body {
 }
 
 .button {
-  cursor: pointer;
-  max-width: 190px;
-  height: 30px;
-  border: 2px solid transparent;
-  outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  background-color: #212121;
-  color: white;
-  padding: 5px;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
-  margin: 5px;
-  position: absolute;
-  float: right;
+    cursor: pointer;
+    max-width: 190px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    background-color: #212121;
+    color: white;
+    padding: 5px;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+    margin: 5px;
+    position: absolute;
+    float: right;
 }
 
 .users {
-   display: block;
-   position: relative;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   padding: 10px;
-   width: 250px;
-   margin-top: 2%;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 250px;
+    margin-top: 2%;
 }
 
 .users-below {
-  display: block;
-  overflow-y: auto;
-  height: 100px;
-  width: 100px;
-  margin: auto;
+    display: block;
+    overflow-y: auto;
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }
 
 .users-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .users-link {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  max-width: 190px;
-  height: 30px;
-  outline: none;
-  background-color: #212121;
-  color: #FAEEDD;
-  padding: 5px;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    max-width: 190px;
+    height: 30px;
+    outline: none;
+    background-color: #212121;
+    color: #faeedd;
+    padding: 5px;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 .users-link:hover {
@@ -195,20 +195,20 @@ body {
 }
 
 .leaveButton {
-  cursor: pointer;
-  display: block;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
-  max-width: 190px;
-  height: 30px;
-  outline: none;
-  background-color: #212121;
-  color: #FAEEDD;
-  padding: 5px;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    max-width: 190px;
+    height: 30px;
+    outline: none;
+    background-color: #212121;
+    color: #faeedd;
+    padding: 5px;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 .leaveButton:hover {
@@ -224,7 +224,7 @@ body {
     caret-color: #3f3f3f;
     background-color: #212121;
     color: white;
-    transition: .5s linear;
+    transition: 0.5s linear;
     font-family: monospace;
     letter-spacing: 1px;
     text-align: center;
@@ -232,45 +232,45 @@ body {
 }
 
 .chat-input-container {
-   display: flex;
-   align-items: center;
-   position: relative;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   width: 630px;
-   margin-top: 4%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 630px;
+    margin-top: 4%;
 }
 
 .chat-text-input {
-  max-width: 190px;
-  height: 30px;
-  border: 2px solid transparent;
-  outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
-  background-color: #212121;
-  color: white;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
-  text-align: center;
+    max-width: 190px;
+    height: 30px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    color: white;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .chat-text-input:focus {
-  caret-color: #fa4753;
-  color: #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
 }
 
 .chat-button {
-  cursor: pointer;
-  max-width: 190px;
-  height: 36px;
-  border: 2px solid transparent;
-  background-color: #212121;
-  color: white;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    cursor: pointer;
+    max-width: 190px;
+    height: 36px;
+    border: 2px solid transparent;
+    background-color: #212121;
+    color: white;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 .chat-button:hover {
@@ -278,22 +278,22 @@ body {
 }
 
 .sender {
-    color: #A2ADD0;
+    color: #a2add0;
     text-align: left;
     padding: 5px;
 }
 
 .receiver {
-    color: #B3446C;
+    color: #b3446c;
     text-align: right;
     padding: 5px;
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 1px solid transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid transparent;
 }
 
 .user-h2 {
@@ -302,29 +302,29 @@ body {
 }
 
 .form {
-   display: block;
-   position: relative;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   padding: 10px;
-   margin-top: 20%;
-   color: #FAEEDD;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    margin-top: 20%;
+    color: #faeedd;
 }
 
 .form-group a {
-  cursor: pointer;
-  text-align: left;
-  text-decoration: none;
-  outline: none;
-  background-color: #212121;
-  color: #FAEEDD;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    outline: none;
+    background-color: #212121;
+    color: #faeedd;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 .form-group a:hover {
-   color: #fa4753;
+    color: #fa4753;
 }
 
 .helptext {
@@ -337,40 +337,48 @@ body {
 }
 
 #id_username {
-  border: 2px solid transparent;
-  outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
-  background-color: #212121;
-  color: white;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 5px;
-  margin-bottom: 5px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    caret-color: #3f3f3f;
+    background-color: #212121;
+    color: white;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 #id_username:focus {
-  border: 2px solid #fa4753;
-  caret-color: #fa4753;
-  color: #fa4753;
-  box-shadow: 4px 4px 10px #070707;
+    border: 2px solid #fa4753;
+    caret-color: #fa4753;
+    color: #fa4753;
+    box-shadow: 4px 4px 10px #070707;
 }
 
 #id_username:focus::placeholder {
-  color: #fa4753;
+    color: #fa4753;
 }
 
 #id_avatar::file-selector-button {
-  cursor: pointer;
-  border: 2px solid transparent;
-  background-color: #212121;
-  color: #fa4753;
-  transition: .5s linear;
-  font-family: monospace;
-  letter-spacing: 1px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: #212121;
+    color: #fa4753;
+    transition: 0.5s linear;
+    font-family: monospace;
+    letter-spacing: 1px;
 }
 
 #id_avatar::file-selector-button:hover {
+    color: white;
+}
+
+.container > form > ul > li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     color: white;
 }

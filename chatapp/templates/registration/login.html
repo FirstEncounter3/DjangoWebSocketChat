@@ -3,15 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ChatApp - Login</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
 </head>
 <body>
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="login">
-    <input type="hidden" name="next" value="{{ next }}">
-    <a href="{% url 'signup' %}">Or signup</a>
-</form>
+    <div class="container">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="hidden" name="next" value="{{ next }}">
+            <input class="chat-button" type="submit" value="login">
+            <div>
+                <a class="chat-button" href="{% url 'signup' %}">Or signup</a>
+            </div>
+        </form>
+    </div>
+ <script src="{% static 'login.js' %}"></script>
 </body>
 </html>

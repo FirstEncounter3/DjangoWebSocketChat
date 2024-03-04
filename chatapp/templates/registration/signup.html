@@ -1,15 +1,23 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ChatApp - Signup</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" />
 </head>
 <body>
-    <form method="post">
-    {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Sing up">
-    </form>
-    <a href="{% url 'login' %}">Or login</a>
+    <div class="container">
+        <form method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+                <input class="chat-button" type="submit" value="Sing up">
+        </form>
+            <div>
+                <a href="{% url 'login' %}" class="chat-button">Or login</a>
+            </div>
+
+    </div>
+    <script src="{% static 'signup.js' %}"></script>
 </body>
 </html>
