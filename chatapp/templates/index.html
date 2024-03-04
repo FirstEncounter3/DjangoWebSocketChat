@@ -20,6 +20,17 @@ ChatApp - Choose Room
             {% endfor %}
         </div>
     </div>
-
+    <div class="users">
+        <p class="users-p">also you can join in active rooms</p>
+        <div class="users-below">
+                {% for room in rooms %}
+                    <ul class="users-ul">
+                        <li class="users-li">
+                            <a href="/chat/{{ room.room_name }}" class="users-link">{{ room.room_name }}</a>
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
+    </div>
     <script src="{% static 'index.js' %}"></script>
 {% endblock content %}

@@ -17,7 +17,8 @@ from . import serializers
 @login_required
 def index(request):
     users = User.objects.all().exclude(pk=request.user.id)
-    return render(request, 'index.html', {"users": users})
+    rooms = models.Room.objects.all()
+    return render(request, 'index.html', {"users": users, "rooms": rooms})
 
 
 @login_required
